@@ -1,0 +1,118 @@
+2020-09-05 09:24:20.815 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/api/Articulo  
+2020-09-05 09:24:20.820 -05:00 [INF] Executed action Examen.Controllers.ArticuloController.Listar (Examen) in 35868926.1385ms
+2020-09-05 09:24:20.826 -05:00 [INF] Executed endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 09:24:20.826 -05:00 [INF] Executing endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 09:24:20.827 -05:00 [INF] Route matched with {action = "Listar", controller = "Articulo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Listar() on controller Examen.Controllers.ArticuloController (Examen).
+2020-09-05 09:24:20.830 -05:00 [INF] Llego Listall Articulo
+2020-09-05 09:24:20.827 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'TipoArticuloIdTipoArticulo1'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Examen.Services.ArticuloServices.ListAll() in C:\Users\Ronald\source\repos\Examen\Examen\Services\Clases\ArticuloServices.cs:line 24
+   at Examen.Manager.ArticuloManager.ListAll() in C:\Users\Ronald\source\repos\Examen\Examen\Manager\Clases\ArticuloManager.cs:line 21
+   at Examen.Controllers.ArticuloController.Listar() in C:\Users\Ronald\source\repos\Examen\Examen\Controllers\ArticuloController.cs:line 23
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:6bc76eff-f00e-4315-bb75-ca9556f83198
+Error Number:207,State:1,Class:16
+2020-09-05 09:24:20.847 -05:00 [INF] Entity Framework Core 3.1.7 initialized 'ExamenContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-09-05 09:24:20.869 -05:00 [INF] Request finished in 35868978.8609ms 500 text/html; charset=utf-8
+2020-09-05 09:24:21.026 -05:00 [ERR] Failed executing DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[IdArticulo], [a].[Costo], [a].[IdTipoArticulo], [a].[NombreArticulo], [a].[PrecioVenta], [a].[TipoArticuloIdTipoArticulo1]
+FROM [EXAMEN].[Articulo] AS [a]
+2020-09-05 09:24:21.027 -05:00 [ERR] An exception occurred while iterating over the results of a query for context type 'Examen.Contexto.ExamenContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'TipoArticuloIdTipoArticulo1'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:c9c2ae79-a293-4f82-8769-64cbeeb5c038
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'TipoArticuloIdTipoArticulo1'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:c9c2ae79-a293-4f82-8769-64cbeeb5c038
+Error Number:207,State:1,Class:16
+2020-09-05 09:26:15.487 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-05 09:26:15.517 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/weatherforecast  
+2020-09-05 09:26:15.544 -05:00 [INF] Hosting environment: Development
+2020-09-05 09:26:15.544 -05:00 [INF] Content root path: C:\Users\Ronald\source\repos\Examen\Examen
+2020-09-05 09:26:15.606 -05:00 [INF] Executing endpoint 'Examen.Controllers.WeatherForecastController.Get (Examen)'
+2020-09-05 09:26:15.665 -05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Examen.WeatherForecast] Get() on controller Examen.Controllers.WeatherForecastController (Examen).
+2020-09-05 09:26:15.672 -05:00 [INF] Executing ObjectResult, writing value of type 'Examen.WeatherForecast[]'.
+2020-09-05 09:26:15.712 -05:00 [INF] Executed action Examen.Controllers.WeatherForecastController.Get (Examen) in 39.0515ms
+2020-09-05 09:26:15.716 -05:00 [INF] Executed endpoint 'Examen.Controllers.WeatherForecastController.Get (Examen)'
+2020-09-05 09:26:15.720 -05:00 [INF] Request finished in 206.4052ms 200 application/json; charset=utf-8
+2020-09-05 09:26:28.086 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/api/Articulo  
+2020-09-05 09:26:28.089 -05:00 [INF] Executing endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 09:26:28.092 -05:00 [INF] Route matched with {action = "Listar", controller = "Articulo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Listar() on controller Examen.Controllers.ArticuloController (Examen).
+2020-09-05 09:26:28.330 -05:00 [INF] Llego Listall Articulo
+2020-09-05 09:26:29.160 -05:00 [WRN] No type was specified for the decimal column 'Costo' on entity type 'Articulo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-09-05 09:26:29.160 -05:00 [WRN] No type was specified for the decimal column 'PrecioVenta' on entity type 'Articulo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-09-05 09:26:29.241 -05:00 [INF] Entity Framework Core 3.1.7 initialized 'ExamenContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-09-05 09:26:29.589 -05:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[IdArticulo], [a].[Costo], [a].[IdTipoArticulo], [a].[NombreArticulo], [a].[PrecioVenta]
+FROM [EXAMEN].[Articulo] AS [a]
+2020-09-05 09:26:29.679 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Examen.Models.BE.Articulo, Examen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-09-05 09:26:29.684 -05:00 [INF] Executed action Examen.Controllers.ArticuloController.Listar (Examen) in 1591.5148ms
+2020-09-05 09:26:29.684 -05:00 [INF] Executed endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 09:26:29.688 -05:00 [INF] Request finished in 1602.1822ms 200 application/json; charset=utf-8

@@ -22,8 +22,8 @@ namespace Examen.Manager
                     select new BE.Articulo()
                     {
                        IdArticulo = x.IdArticulo,
-                       //TipoArticulo = x.TipoArticulo.NombreTipoArticulo,
-                       NombreArticulo = x.NombreArticulo,
+                        TipoArticulo = x.TipoArticulo.NombreTipoArticulo,
+                        NombreArticulo = x.NombreArticulo,
                        Margen = (x.PrecioVenta - x.Costo)
                     }).ToList();
         }

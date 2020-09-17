@@ -1,5 +1,6 @@
 ﻿using Examen.Contexto;
 using Examen.Models.DTO;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Examen.Services
         public List<TipoArticulo> ListAll()
         {
             log.LogInformation("Llego Listall tipo articulo");
-            var result = examenContext.TipoArticulo.ToList();
+            var result = examenContext.TipoArticulo.Include("Articulo").ToList();
             return result;
         }
     }

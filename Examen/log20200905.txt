@@ -116,3 +116,61 @@ FROM [EXAMEN].[Articulo] AS [a]
 2020-09-05 09:26:29.684 -05:00 [INF] Executed action Examen.Controllers.ArticuloController.Listar (Examen) in 1591.5148ms
 2020-09-05 09:26:29.684 -05:00 [INF] Executed endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
 2020-09-05 09:26:29.688 -05:00 [INF] Request finished in 1602.1822ms 200 application/json; charset=utf-8
+2020-09-05 20:27:35.462 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-05 20:27:35.510 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/weatherforecast  
+2020-09-05 20:27:35.544 -05:00 [INF] Hosting environment: Development
+2020-09-05 20:27:35.544 -05:00 [INF] Content root path: C:\Users\Ronald\source\repos\Examen\Examen
+2020-09-05 20:27:35.612 -05:00 [INF] Executing endpoint 'Examen.Controllers.WeatherForecastController.Get (Examen)'
+2020-09-05 20:27:35.682 -05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Examen.WeatherForecast] Get() on controller Examen.Controllers.WeatherForecastController (Examen).
+2020-09-05 20:27:35.694 -05:00 [INF] Executing ObjectResult, writing value of type 'Examen.WeatherForecast[]'.
+2020-09-05 20:27:35.754 -05:00 [INF] Executed action Examen.Controllers.WeatherForecastController.Get (Examen) in 64.317ms
+2020-09-05 20:27:35.760 -05:00 [INF] Executed endpoint 'Examen.Controllers.WeatherForecastController.Get (Examen)'
+2020-09-05 20:27:35.763 -05:00 [INF] Request finished in 259.2105ms 200 application/json; charset=utf-8
+2020-09-05 20:27:42.328 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/api/Articulo  
+2020-09-05 20:27:42.330 -05:00 [INF] Executing endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 20:27:42.333 -05:00 [INF] Route matched with {action = "Listar", controller = "Articulo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Listar() on controller Examen.Controllers.ArticuloController (Examen).
+2020-09-05 20:27:42.546 -05:00 [INF] Llego Listall Articulo
+2020-09-05 20:27:43.266 -05:00 [WRN] No type was specified for the decimal column 'Costo' on entity type 'Articulo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-09-05 20:27:43.266 -05:00 [WRN] No type was specified for the decimal column 'PrecioVenta' on entity type 'Articulo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-09-05 20:27:43.311 -05:00 [INF] Entity Framework Core 3.1.7 initialized 'ExamenContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-09-05 20:27:43.607 -05:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[IdArticulo], [a].[Costo], [a].[IdTipoArticulo], [a].[NombreArticulo], [a].[PrecioVenta]
+FROM [EXAMEN].[Articulo] AS [a]
+2020-09-05 20:27:51.939 -05:00 [INF] Executed action Examen.Controllers.ArticuloController.Listar (Examen) in 9605.5139ms
+2020-09-05 20:27:51.941 -05:00 [INF] Executed endpoint 'Examen.Controllers.ArticuloController.Listar (Examen)'
+2020-09-05 20:27:51.944 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Examen.Manager.ArticuloManager.<>c.<ListAll>b__2_0(Articulo x) in C:\Users\Ronald\source\repos\Examen\Examen\Manager\Clases\ArticuloManager.cs:line 22
+   at System.Linq.Enumerable.SelectListIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Examen.Manager.ArticuloManager.ListAll() in C:\Users\Ronald\source\repos\Examen\Examen\Manager\Clases\ArticuloManager.cs:line 21
+   at Examen.Controllers.ArticuloController.Listar() in C:\Users\Ronald\source\repos\Examen\Examen\Controllers\ArticuloController.cs:line 23
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-05 20:27:52.049 -05:00 [INF] Request finished in 9721.4535ms 500 text/plain
+2020-09-05 20:27:58.923 -05:00 [INF] Request starting HTTP/2.0 GET https://localhost:44311/api/TipoArticulo  
+2020-09-05 20:27:58.928 -05:00 [INF] Executing endpoint 'Examen.Controllers.TipoArticuloController.Listar (Examen)'
+2020-09-05 20:27:58.936 -05:00 [INF] Route matched with {action = "Listar", controller = "TipoArticulo"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Listar() on controller Examen.Controllers.TipoArticuloController (Examen).
+2020-09-05 20:27:58.938 -05:00 [INF] Llego Listall tipo articulo
+2020-09-05 20:27:58.969 -05:00 [INF] Entity Framework Core 3.1.7 initialized 'ExamenContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-09-05 20:27:58.978 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[IdTipoArticulo], [t].[NombreTipoArticulo]
+FROM [EXAMEN].[TipoArticulo] AS [t]
+2020-09-05 20:27:58.984 -05:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Examen.Models.DTO.TipoArticulo, Examen, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2020-09-05 20:27:58.990 -05:00 [INF] Executed action Examen.Controllers.TipoArticuloController.Listar (Examen) in 53.9202ms
+2020-09-05 20:27:58.990 -05:00 [INF] Executed endpoint 'Examen.Controllers.TipoArticuloController.Listar (Examen)'
+2020-09-05 20:27:58.991 -05:00 [INF] Request finished in 69.1928ms 200 application/json; charset=utf-8

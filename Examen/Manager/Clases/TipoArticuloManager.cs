@@ -16,7 +16,8 @@ namespace Examen.Manager
         }
         public List<TipoArticulo> ListAll()
         {
-            return tipoArticuloServices.ListAll();
+            var resultado = tipoArticuloServices.ListAll();
+            return resultado;
         }
     }
 }

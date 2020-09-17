@@ -15,7 +15,7 @@ namespace Examen.Contexto.Configuracion
             builder.HasKey("IdArticulo");
             builder.ToTable("Articulo", "EXAMEN");
 
-            builder.HasOne(t => t.TipoArticulo).WithMany(a => a.Articulos).HasForeignKey(i => i.IdTipoArticulo);
+            builder.HasOne<TipoArticulo>(t => t.TipoArticulo).WithMany(a => a.Articulo).HasForeignKey(i => i.IdTipoArticulo);
         }
     }
 }

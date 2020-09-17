@@ -71,5 +71,8 @@ C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Microsoft.Azu
 C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Serilog.Sinks.MSSqlServer.dll
 C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Ronald\source\repos\Examen\Examen\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\Ronald\source\repos\Examen\Examen\obj\Debug\netcoreapp3.1\Examen.csproj.CoreCompileInputs.cache
 C:\Users\Ronald\source\repos\Examen\Examen\obj\Debug\netcoreapp3.1\Examen.MvcApplicationPartsAssemblyInfo.cache

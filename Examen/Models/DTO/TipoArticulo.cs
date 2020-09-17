@@ -10,6 +10,6 @@ namespace Examen.Models.DTO
         public int IdTipoArticulo { get; set; }
         public string NombreTipoArticulo { get; set; }
 
-        public virtual List<Articulo> Articulos { get; set; }
+        public virtual List<Articulo> Articulo { get; set; }
     }
 }

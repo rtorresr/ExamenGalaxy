@@ -22,6 +22,7 @@ namespace Examen.Contexto
             modelBuilder.ApplyConfiguration(new TipoArticuloConfiguration());
             modelBuilder.ApplyConfiguration(new ArticuloConfiguration());
             modelBuilder.ApplyConfiguration(new UserAppConfiguration());
+            modelBuilder.ApplyConfiguration(new OpcionConfiguration());
 
             #endregion
 
@@ -31,5 +32,6 @@ namespace Examen.Contexto
         public DbSet<TipoArticulo> TipoArticulo { get; set; }
         public DbSet<Articulo> Articulo { get; set; }
         public DbSet<UserApp> UserApp { get; set; }
+        public DbSet<Opcion> Opcion { get; set; }
     }
 }

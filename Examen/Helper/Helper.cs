@@ -1,5 +1,9 @@
 ﻿using Examen.Manager;
+using Examen.Manager.Clases;
+using Examen.Manager.Interfaces;
 using Examen.Services;
+using Examen.Services.Clases;
+using Examen.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +26,7 @@ namespace Examen.Helper
             services.AddTransient<ITipoArticuloServices, TipoArticuloServices>();
             services.AddTransient<IUserAppServices, UserAppServices>();
             services.AddTransient<IArticuloServices, ArticuloServices>();
+            services.AddTransient<IOpcionServices, OpcionServices>();
 
             #endregion
 
@@ -30,6 +35,7 @@ namespace Examen.Helper
             services.AddTransient<ITipoArticuloManager, TipoArticuloManager>();
             services.AddTransient<IUsuarioManager, UsuarioManager>();
             services.AddTransient<IArticuloManager, ArticuloManager>();
+            services.AddTransient<IOpcionManager, OpcionManager>();
 
             #endregion
         }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8s84mAjd2Q76KXH7T+X4UyHzPIt50rZ3/pRZccL78Q/K2HuRDw8T78nVROvPXjk6FQO+fRIZNhxZkG62nOII4Q==",
+  "dgSpecHash": "0QEuTt0hjesJwgOdRYiqgxGUydTdckryzfDDOSeYgCH5TYDlhkPwrlyg8GYlFFcEw/a3tCGHIo/dP8Cw7Ftzcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ronald\\source\\repos\\Examen\\Examen\\Examen.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ronald\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\Ronald\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.8\\microsoft.aspnetcore.jsonpatch.3.1.8.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.8\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.8.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.4.0\\microsoft.azure.services.appauthentication.1.4.0.nupkg.sha512",
@@ -114,7 +116,7 @@
     "C:\\Users\\Ronald\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

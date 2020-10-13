@@ -13,31 +13,43 @@ namespace Examen.Manager.Clases
     public class OpcionManager : IOpcionManager
     {
         private readonly IOpcionServices opcionServices;
+        private readonly IMapper mapper;
 
-        public OpcionManager(IOpcionServices opcionServices)
+        public OpcionManager(IOpcionServices opcionServices, IMapper mapper)
         {
             this.opcionServices = opcionServices;
+            this.mapper = mapper;
         }
 
         public OpcionBE Actualizar(OpcionBE ent)
         {
-            var request = new Opcion()
-            {
-                IdOpcion = ent.Codigo,
-                NombreOpcion = ent.Nombre,
-                UrlOpcion = ent.Url,
-                NombreIcono = ent.Icono
-            };
+            var request = mapper.Map<Opcion>(ent);
 
             var res = opcionServices.Actualizar(request);
 
-            var result = new OpcionBE()
-            {
-                Codigo = res.IdOpcion,
-                Nombre = res.NombreOpcion,
-                Url = res.UrlOpcion,
-                Icono = res.NombreIcono
-            };
+            var result = mapper.Map<OpcionBE>(res);
+
+            return result;
+        }
+
+        public OpcionBE Agregar(OpcionBE ent)
+        {
+            var request = mapper.Map<Opcion>(ent);
+
+            var res = opcionServices.Agregar(request);
+
+            var result = mapper.Map<OpcionBE>(res);
+
+            return result;
+        }
+
+        public OpcionBE Eliminar(OpcionBE ent)
+        {
+            var request = mapper.Map<Opcion>(ent);
+
+            var res = opcionServices.Eliminar(request);
+
+            var result = mapper.Map<OpcionBE>(res);
 
             return result;
         }
@@ -46,22 +58,7 @@ namespace Examen.Manager.Clases
         {
             List<Opcion> listaOpcion = await opcionServices.ListarPaginado(ent);
 
-            var listaRes = new List<OpcionBE>();
-
-            foreach (var item in listaOpcion)
-            {
-                var elem = new OpcionBE()
-                {
-                    Codigo = item.IdOpcion,
-                    Nombre = item.NombreOpcion,
-                    Url = item.UrlOpcion,
-                    Icono = item.NombreIcono
-                };
-
-                listaRes.Add(elem);
-            }
-
-            //var listaRes = mapper.Map<List<OpcionBE>>(listaOpcion);
+            var listaRes = mapper.Map<List<OpcionBE>>(listaOpcion);
             OpcionListar res = new OpcionListar { ListaOpcion = listaRes, TotalReg = ent.NroRegTotal };
             return res;
         }

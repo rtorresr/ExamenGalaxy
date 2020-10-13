@@ -11,5 +11,7 @@ namespace Examen.Manager.Interfaces
     {
         Task<OpcionListar> ListarPaginado(ExtraPaginacion ent);
         OpcionBE Actualizar (OpcionBE ent);
+        OpcionBE Agregar(OpcionBE ent);
+        OpcionBE Eliminar(OpcionBE ent);
     }
 }

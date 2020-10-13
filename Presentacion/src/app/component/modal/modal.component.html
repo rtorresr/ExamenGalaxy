@@ -1,0 +1,37 @@
+<h1 mat-dialog-title>
+  <div *ngIf="data.codigo; else elseBlock">Editando opción</div>
+  <ng-template #elseBlock>Agregando opción</ng-template>
+</h1>
+<div mat-dialog-content>
+  <form #opcionForm="ngForm" (ngSubmit)="agregarOactualizar(opcionForm)">
+      <input type="hidden" name="codigo" [ngModel]="data.codigo">
+      <label for="nombre">Nombre</label>
+      <input 
+      type="text" 
+      id="nombre" 
+      name="nombre"
+      required
+      minlength="3"
+      [ngModel]="data.nombre">
+      <br>
+      <label for="url">URL</label>
+      <input 
+      type="text" 
+      id="url" 
+      name="url"
+      minlength="1"
+      [ngModel]="data.url">
+<br>
+
+      <label for="icono">Icono</label>
+      <input 
+      type="text" 
+      id="icono"
+       name="icono"
+       minlength="1"
+       [ngModel]="data.icono">
+       <br>
+       <button [disabled]="!opcionForm.valid" type="submit">Guardar</button>
+
+  </form>
+</div>

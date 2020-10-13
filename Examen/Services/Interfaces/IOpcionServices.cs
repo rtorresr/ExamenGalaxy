@@ -10,5 +10,7 @@ namespace Examen.Services.Interfaces
     {
         Task<List<Opcion>> ListarPaginado(ExtraPaginacion ent);
         Opcion Actualizar(Opcion ent);
+        Opcion Agregar(Opcion ent);
+        Opcion Eliminar(Opcion ent);
     }
 }
